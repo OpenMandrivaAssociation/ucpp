@@ -23,9 +23,9 @@ some other code; in the latter case, ucpp will output tokens, one
 at a time, on demand, as an integrated lexer.
 
 ucpp operates in two modes:
--- lexer mode:	ucpp is linked to some other code and outputs a stream of
+-- lexer mode: ucpp is linked to some other code and outputs a stream of
 tokens (each call to the lex() function will yield one token)
--- non-lexer mode:	ucpp preprocesses text and outputs the resulting text
+-- non-lexer mode: ucpp preprocesses text and outputs the resulting text
 to a file descriptor; if linked to some other code, the cpp() function
 must be called repeatedly, otherwise ucpp is a stand-alone binary.
 
@@ -48,7 +48,7 @@ Includes and definitions for developing with the ucpp library.
 %setup -q
 
 %build
-%configure \
+%configure2_5x \
 	--disable-static
 
 %make
@@ -58,7 +58,7 @@ Includes and definitions for developing with the ucpp library.
 
 %files
 %{_bindir}/*
-%{_mandir}/man1/ucpp.1.gz
+%{_mandir}/man1/ucpp.1*
 
 %files -n %{libname}
 %{_libdir}/libucpp.so.%{major}*
