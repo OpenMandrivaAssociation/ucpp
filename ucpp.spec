@@ -5,7 +5,7 @@
 Summary:	A quick and light preprocessor, but anyway fully compliant to C99
 Name:		ucpp
 Version:	1.3.4
-Release:	1
+Release:	2
 License:	BSD-3-Clause
 Group:		Development/C++
 Url:		http://code.google.com/p/ucpp/
@@ -39,6 +39,7 @@ This package contains the shared library for %{name}
 %package -n %{devname}
 Summary:	Files for Developing with ucpp
 Group:		Development/C++
+Requires:	%{name} = %{version}-%{release}
 Requires:	%{libname} = %{version}-%{release}
 
 %description -n %{devname}
