@@ -49,7 +49,9 @@ Includes and definitions for developing with the ucpp library.
 %setup -q
 
 %build
-%configure2_5x \
+CFLAGS="%{optflags} -Qunused-arguments" \
+CXXFLAGS="%{optflags} -Qunused-arguments" \
+%configure \
 	--disable-static
 
 %make
