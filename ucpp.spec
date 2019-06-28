@@ -4,12 +4,12 @@
 
 Summary:	A quick and light preprocessor, but anyway fully compliant to C99
 Name:		ucpp
-Version:	1.3.4
-Release:	12
+Version:	1.3.5
+Release:	1
 License:	BSD-3-Clause
 Group:		Development/C++
-Url:		http://code.google.com/p/ucpp/
-Source0:	http://dev.gentooexperimental.org/~scarabeus/%{name}-%{version}.tar.xz
+Url:		https://gitlab.com/scarabeusiv/ucpp/
+Source0:	https://gitlab.com/scarabeusiv/ucpp/-/archive/%{version}/%{name}-%{version}.tar.bz2
 
 %description
 A C preprocessor is a part of a C compiler responsible for macro
@@ -47,10 +47,11 @@ Includes and definitions for developing with the ucpp library.
 
 %prep
 %setup -q
+autoreconf -fiv
 
 %build
-CFLAGS="%{optflags} -Qunused-arguments" \
-CXXFLAGS="%{optflags} -Qunused-arguments" \
+CFLAGS="%{optflags}" \
+CXXFLAGS="%{optflags}" \
 %configure \
 	--disable-static
 
