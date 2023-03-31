@@ -5,7 +5,7 @@
 Summary:	A quick and light preprocessor, but anyway fully compliant to C99
 Name:		ucpp
 Version:	1.3.5
-Release:	1
+Release:	2
 License:	BSD-3-Clause
 Group:		Development/C++
 Url:		https://gitlab.com/scarabeusiv/ucpp/
