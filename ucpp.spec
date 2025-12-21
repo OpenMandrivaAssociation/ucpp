@@ -11,6 +11,11 @@ Group:		Development/C++
 Url:		https://gitlab.com/scarabeusiv/ucpp/
 Source0:	https://gitlab.com/scarabeusiv/ucpp/-/archive/%{version}/%{name}-%{version}.tar.bz2
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 A C preprocessor is a part of a C compiler responsible for macro
 replacement, conditional compilation and inclusion of header files.
