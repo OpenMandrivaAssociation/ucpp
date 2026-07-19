@@ -5,7 +5,7 @@
 Summary:	A quick and light preprocessor, but anyway fully compliant to C99
 Name:		ucpp
 Version:	1.3.5
-Release:	2
+Release:	3
 License:	BSD-3-Clause
 Group:		Development/C++
 Url:		https://gitlab.com/scarabeusiv/ucpp/
@@ -51,7 +51,7 @@ Requires:	%{libname} = %{version}-%{release}
 Includes and definitions for developing with the ucpp library.
 
 %prep
-%setup -q
+%autosetup -p1
 autoreconf -fiv
 
 %build
@@ -60,10 +60,10 @@ CXXFLAGS="%{optflags}" \
 %configure \
 	--disable-static
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{_bindir}/*
