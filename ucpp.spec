@@ -58,7 +58,9 @@ autoreconf -fiv
 CFLAGS="%{optflags}" \
 CXXFLAGS="%{optflags}" \
 %configure \
-	--disable-static
+	--disable-static \
+	--disable-werror \
+	--disable-silent-rules
 
 %make_build
 
